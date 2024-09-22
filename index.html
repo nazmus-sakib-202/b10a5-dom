@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Bangladesh</title>
-</head>
-<body>
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Color -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "color-01": "#F9F7F3",
+              "color-02": "#B4F461",
+              "color-03": "rgba(17, 17, 17, 0.7)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .font-lexend {
+        font-family: "Lexend", system-ui;
+      }
+    </style>
+  </head>
+  <body class="font-lexend">
+    <header class="bg-color-01">
+      <div class="container mx-auto border-2 border-rose-600">
+        <!-- Navbar -->
+        <div
+          class="navbar w-11/12 mx-auto pt-4 pb-6 md:pb-10 flex flex-row justify-between items-center"
+        >
+          <!-- Blog Button -->
+          <div class="navbar-start">
+            <button
+              class="btn sm:btn-xs md:btn bg-color-02 w-16 md:w-24 text-sm md:text-xl font-semibold"
+            >
+              Blog
+            </button>
+          </div>
+
+          <!-- Logo -->
+          <div class="navbar-center">
+            <div class="flex flex-row gap-2 md:gap-4 items-center">
+              <div class="w-9 w-12 h-9 md:h-12">
+                <img src="assets/logo.png" alt="" />
+              </div>
+              <p class="text-sm md:text-xl font-semibold">
+                <span class="block md:inline">Donate</span>
+                <span class="block md:inline"> Bangladesh</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Balance Amount -->
+          <div class="navbar-end">
+            <div class="flex flex-row gap-1 md:gap-3 items-center">
+              <div class="h-5 md:h-7 w-5 md:w-7">
+                <img src="assets/coin.png" alt="" />
+              </div>
+              <p class="text-color-03 text-sm md:text-xl font-medium">
+                <span>5500</span> BDT
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <main></main>
-</body>
+  </body>
 </html>
