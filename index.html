@@ -49,10 +49,10 @@
   <body class="font-lexend">
     <header>
       <!-- Navbar -->
-      <div class="bg-color-01">
-        <div class="container mx-auto border-2 border-rose-600">
+      <div class="bg-color-01 sticky top-0 z-10">
+        <div class="container mx-auto">
           <div
-            class="navbar w-11/12 mx-auto py-4 md:py-5 flex flex-row justify-between items-center border-2 border-rose-600"
+            class="navbar w-11/12 mx-auto py-4 md:py-5 flex flex-row justify-between items-center"
           >
             <!-- Blog Button -->
             <div>
@@ -67,9 +67,8 @@
                 <div class="w-9 w-12 h-9 md:h-12">
                   <img src="assets/logo.png" alt="" />
                 </div>
-                <p class="text-base font-semibold">
-                  <span class="block md:inline">Donate</span>
-                  <span class="block md:inline"> Bangladesh</span>
+                <p class="text-base font-semibold hidden md:flex">
+                  Donate Bangladesh
                 </p>
               </div>
             </div>
@@ -88,10 +87,10 @@
           </div>
         </div>
         <!-- Banner -->
-        <div class="bg-white">
-          <div class="container mx-auto border-2 border-rose-600">
+        <div class="bg-white backdrop-opacity-25">
+          <div class="container mx-auto">
             <div
-              class="navbar w-11/12 mx-auto pb-4 pt-6 md:pt-10 flex flex-row justify-between items-center border-2 border-rose-600"
+              class="navbar w-11/12 mx-auto pb-4 pt-6 md:pt-10 flex flex-row justify-between items-center"
             >
               <div class="navbar-start"></div>
 
@@ -115,18 +114,18 @@
         </div>
       </div>
     </header>
-    <main class="container mx-auto space-y-5 border-2 border-rose-600">
+    <main class="container mx-auto space-y-8">
       <!-- Noakhali -->
-      <div class="w-11/12 mx-auto border-2 border-rose-600">
+      <div class="w-11/12 mx-auto mt-2 md:mt-6">
         <div
-          class="flex flex-col md:flex-row p-4 gap-5 border-2 border-color04 rounded-xl"
+          class="flex flex-col md:flex-row p-4 gap-5 border border-color04 rounded-xl shadow-md"
         >
           <!-- Noakhali Image -->
-          <div class="flex-1 border-2 border-rose-600">
+          <div class="flex-1">
             <img src="assets/noakhali.png" alt="" />
           </div>
           <!-- Noakhali Text -->
-          <div class="flex-1 border-2 border-rose-600">
+          <div class="flex-1">
             <div
               class="flex flex-col items-start h-full justify-between md:space-y-0 space-y-3"
             >
@@ -154,25 +153,49 @@
                 placeholder="Write Donation Amount"
                 class="input input-bordered w-full text-sm font-light text-color-06"
               />
-              <button class="btn bg-color-02 w-full text-base font-semibold">
+              <!-- Open the modal using ID.showModal() method -->
+              <button
+                class="btn bg-color-02 w-full text-base font-semibold"
+                onclick="nokhali_modal_5.showModal()"
+              >
                 Donate Now
               </button>
+              <dialog
+                id="nokhali_modal_5"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <div class="modal-box flex flex-col items-center">
+                  <h3 class="text-2xl font-bold">Congrates!</h3>
+                  <div class="my-3">
+                    <img src="assets/coin.png" alt="" />
+                  </div>
+                  <p class="pt-4 text-sm font-light">
+                    You Have Donated for Humankind
+                  </p>
+                  <p class="text-lg font-semibold pt-3">Successfully</p>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <button class="btn text-xs">close confirmation</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Feni -->
-      <div class="w-11/12 mx-auto border-2 border-rose-600">
+      <div class="w-11/12 mx-auto">
         <div
-          class="flex flex-col md:flex-row p-4 gap-5 border-2 border-color04 rounded-xl"
+          class="flex flex-col md:flex-row p-4 gap-5 border border-color04 rounded-xl shadow-md"
         >
           <!-- Feni Image -->
-          <div class="flex-1 border-2 border-rose-600">
+          <div class="flex-1">
             <img src="assets/feni.png" alt="" />
           </div>
           <!-- Feni Text -->
-          <div class="flex-1 border-2 border-rose-600">
+          <div class="flex-1">
             <div
               class="flex flex-col items-start h-full justify-between md:space-y-0 space-y-3"
             >
@@ -202,24 +225,48 @@
                 placeholder="Write Donation Amount"
                 class="input input-bordered w-full text-sm font-light text-color-06"
               />
-              <button class="btn bg-color-02 w-full text-base font-semibold">
+              <!-- Open the modal using ID.showModal() method -->
+              <button
+                class="btn bg-color-02 w-full text-base font-semibold"
+                onclick="feni_modal_5.showModal()"
+              >
                 Donate Now
               </button>
+              <dialog
+                id="feni_modal_5"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <div class="modal-box flex flex-col items-center">
+                  <h3 class="text-2xl font-bold">Congrates!</h3>
+                  <div class="my-3">
+                    <img src="assets/coin.png" alt="" />
+                  </div>
+                  <p class="pt-4 text-sm font-light">
+                    You Have Donated for Humankind
+                  </p>
+                  <p class="text-lg font-semibold pt-3">Successfully</p>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <button class="btn text-xs">close confirmation</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
             </div>
           </div>
         </div>
       </div>
       <!-- Quota -->
-      <div class="w-11/12 mx-auto border-2 border-rose-600">
+      <div class="w-11/12 mx-auto">
         <div
-          class="flex flex-col md:flex-row p-4 gap-5 border-2 border-color04 rounded-xl"
+          class="flex flex-col md:flex-row p-4 gap-5 border border-color04 rounded-xl shadow-md"
         >
           <!-- Quota Image -->
-          <div class="flex-1 border-2 border-rose-600">
+          <div class="flex-1">
             <img src="assets/quota-protest.png" alt="" />
           </div>
           <!-- Quota Text -->
-          <div class="flex-1 border-2 border-rose-600">
+          <div class="flex-1">
             <div
               class="flex flex-col items-start h-full justify-between md:space-y-0 space-y-3"
             >
@@ -250,9 +297,33 @@
                 placeholder="Write Donation Amount"
                 class="input input-bordered w-full text-sm font-light text-color-06"
               />
-              <button class="btn bg-color-02 w-full text-base font-semibold">
+              <!-- Open the modal using ID.showModal() method -->
+              <button
+                class="btn bg-color-02 w-full text-base font-semibold"
+                onclick="quota_modal_5.showModal()"
+              >
                 Donate Now
               </button>
+              <dialog
+                id="quota_modal_5"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <div class="modal-box flex flex-col items-center">
+                  <h3 class="text-2xl font-bold">Congrates!</h3>
+                  <div class="my-3">
+                    <img src="assets/coin.png" alt="" />
+                  </div>
+                  <p class="pt-4 text-sm font-light">
+                    You Have Donated for Humankind
+                  </p>
+                  <p class="text-lg font-semibold pt-3">Successfully</p>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <button class="btn text-xs">close confirmation</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
             </div>
           </div>
         </div>
