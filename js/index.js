@@ -37,11 +37,11 @@ buttonNoakhali.addEventListener("click", function () {
 
   //history
   const historyItem = document.createElement("div");
-  historyItem.className = "bg-white p-3 rounded-md border-2 border-gray-300";
+  historyItem.className = "bg-white p-5 rounded-md border-2 border-gray-300";
   historyItem.innerHTML = `
     <p class="text-base text-gray-500">${noakhaliAmount.toFixed(
       2
-    )} Taka is ${noakhaliTitle}</p><br>
+    )} Taka is Donated for ${noakhaliTitle}</p><br>
     <p class="text-xs text-gray-500">${new Date().toLocaleString()}</p>
   `;
 
@@ -72,11 +72,11 @@ buttonFeni.addEventListener("click", function () {
 
   //history
   const historyItem = document.createElement("div");
-  historyItem.className = "bg-white p-3 rounded-md border-2 border-gray-300";
+  historyItem.className = "bg-white p-5 rounded-md border-2 border-gray-300";
   historyItem.innerHTML = `
     <p class="text-base text-gray-500">${feniAmount.toFixed(
       2
-    )} Taka is ${feniTitle}</p><br>
+    )} Taka is Donated for ${feniTitle}</p><br>
     <p class="text-xs text-gray-500">${new Date().toLocaleString()}</p>
   `;
 
@@ -107,11 +107,11 @@ buttonQuota.addEventListener("click", function () {
 
   //history
   const historyItem = document.createElement("div");
-  historyItem.className = "bg-white p-3 rounded-md border-2 border-gray-300";
+  historyItem.className = "bg-white p-5 rounded-md border-2 border-gray-300";
   historyItem.innerHTML = `
     <p class="text-base text-gray-500">${quotaAmount.toFixed(
       2
-    )} Taka is ${quotaTitle}</p><br>
+    )} Taka is Donated for ${quotaTitle}</p><br>
     <p class="text-xs text-gray-500">${new Date().toLocaleString()}</p>
   `;
 
@@ -152,3 +152,37 @@ historyBtn.addEventListener("click", function () {
   document.getElementById("donation-section").classList.add("hidden");
   document.getElementById("history-section").classList.remove("hidden");
 });
+
+
+// donation button tab
+donationBtn.addEventListener("click", function () {
+  donationBtn.classList.add(
+    "bg-color-02",
+    "text-color-07",
+    "font-semibold",
+    "border-none"
+  );
+
+  donationBtn.classList.remove("text-color-03");
+
+  historyBtn.classList.remove(
+    "bg-color-02",
+    "text-color-07",
+    "font-semibold",
+    "border-none"
+  );
+
+  historyBtn.classList.add(
+    "border-b",
+    "text-color-03",
+    "font-medium",
+    "border-gray-300"
+  );
+
+  document
+    .getElementById("body-section")
+    .classList.remove("flex", "flex-col", "min-h-screen");
+  document.getElementById("history-section").classList.add("hidden");
+  document.getElementById("donation-section").classList.remove("hidden");
+});
+
