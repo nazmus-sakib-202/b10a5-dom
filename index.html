@@ -92,7 +92,7 @@
                   <img src="assets/coin.png" alt="" />
                 </div>
                 <p class="text-base font-medium text-color-03">
-                  <span>5500</span> BDT
+                  <span id="total-balance">5500</span> BDT
                 </p>
               </div>
             </div>
@@ -114,9 +114,7 @@
                 >
                   Donation
                 </button>
-                <button
-                  class="btn btn-outline text-base font-medium text-color-03"
-                >
+                <button class="btn text-base font-medium text-color-03">
                   History
                 </button>
               </div>
@@ -147,7 +145,7 @@
               >
                 <img src="assets/coin.png" alt="" />
                 <p class="text-base font-normal text-color-03">
-                  <span id="total-amount-n">0</span> BDT
+                  <span id="total-donation-n">0</span> BDT
                 </p>
               </button>
               <h6 class="text-base font-bold">
@@ -219,7 +217,7 @@
               >
                 <img src="assets/coin.png" alt="" />
                 <p class="text-base font-normal text-color-03">
-                  <span>0</span> BDT
+                  <span id="total-donation-f">0</span> BDT
                 </p>
               </button>
               <h6 class="text-base font-bold">
@@ -236,6 +234,7 @@
                 to assist those in urgent need.
               </p>
               <input
+                id="feni-amount"
                 type="text"
                 placeholder="Write Donation Amount"
                 class="input input-bordered w-full text-sm font-light text-color-06"
@@ -291,7 +290,7 @@
               >
                 <img src="assets/coin.png" alt="" />
                 <p class="text-base font-normal text-color-03">
-                  <span>0</span> BDT
+                  <span id="total-donation-q">0</span> BDT
                 </p>
               </button>
               <h6 class="text-base font-bold">
@@ -309,6 +308,7 @@
                 brave individuals in their time of need.
               </p>
               <input
+                id="quota-amount"
                 type="text"
                 placeholder="Write Donation Amount"
                 class="input input-bordered w-full text-sm font-light text-color-06"
@@ -345,7 +345,7 @@
         </div>
       </div>
     </main>
-    <footer class="bg-color-01 h-20 md:h-24 mt-12 md:mt-16"></footer>
+    <footer class="bg-color-01 h-20 mt-12 md:mt-16"></footer>
     <script src="js/index.js"></script>
   </body>
 </html>
