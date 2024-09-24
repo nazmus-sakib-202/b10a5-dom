@@ -20,6 +20,16 @@ buttonNoakhali.addEventListener("click", function () {
     document.getElementById("nokhali-amount").value
   );
 
+  if (
+    noakhaliAmount <= 0 ||
+    noakhaliAmount === "" ||
+    noakhaliAmount > totalBalance ||
+    isNaN(noakhaliAmount)
+  ) {
+    alert("Invalid Donation Amount");
+    return;
+  }
+
   const noakhaliTitle = document.getElementById("title-n").innerText;
 
   // noakhali total donation
@@ -27,22 +37,23 @@ buttonNoakhali.addEventListener("click", function () {
   let totalDonationN = parseFloat(totalDonationElementN.innerText);
 
   totalDonationN = totalDonationN + noakhaliAmount;
-  totalDonationElementN.innerText = totalDonationN.toFixed(2);
+  totalDonationElementN.innerText = totalDonationN;
 
   totalBalance = totalBalance - noakhaliAmount;
-  totalBalanceElement.innerText = totalBalance.toFixed(2);
+  totalBalanceElement.innerText = totalBalance;
 
   const noakhaliModal = document.getElementById("noakhali_modal_5");
   noakhaliModal.showModal();
 
-  //history
+  // clear input field
+  document.getElementById("nokhali-amount").value = "";
+
+  // history
   const historyItem = document.createElement("div");
-  historyItem.className = "bg-white p-5 rounded-md border-2 border-gray-300";
+  historyItem.className = "bg-white p-5 rounded-xl border border-gray-300";
   historyItem.innerHTML = `
-    <p class="text-base text-gray-500">${noakhaliAmount.toFixed(
-      2
-    )} Taka is Donated for ${noakhaliTitle}</p><br>
-    <p class="text-xs text-gray-500">${new Date().toLocaleString()}</p>
+    <p class="text-base font-semibold">${noakhaliAmount} Taka is Donated for ${noakhaliTitle}</p><br>
+    <p class="text-xs text-gray-500">Date : ${new Date().toString()}</p>
   `;
 
   const historyContainer = document.getElementById("history-list");
@@ -55,6 +66,16 @@ buttonFeni.addEventListener("click", function () {
   // feni donation input
   const feniAmount = parseFloat(document.getElementById("feni-amount").value);
 
+  if (
+    feniAmount <= 0 ||
+    feniAmount === "" ||
+    feniAmount > totalBalance ||
+    isNaN(feniAmount)
+  ) {
+    alert("Invalid Donation Amount");
+    return;
+  }
+
   const feniTitle = document.getElementById("title-f").innerText;
 
   // feni total donation
@@ -62,22 +83,23 @@ buttonFeni.addEventListener("click", function () {
   let totalDonationF = parseFloat(totalDonationElementF.innerText);
 
   totalDonationF = totalDonationF + feniAmount;
-  totalDonationElementF.innerText = totalDonationF.toFixed(2);
+  totalDonationElementF.innerText = totalDonationF;
 
   totalBalance = totalBalance - feniAmount;
-  totalBalanceElement.innerText = totalBalance.toFixed(2);
+  totalBalanceElement.innerText = totalBalance;
 
   const feniModal = document.getElementById("feni_modal_5");
   feniModal.showModal();
 
-  //history
+  // clear input field
+  document.getElementById("feni-amount").value = "";
+
+  // history
   const historyItem = document.createElement("div");
-  historyItem.className = "bg-white p-5 rounded-md border-2 border-gray-300";
+  historyItem.className = "bg-white p-5 rounded-xl border border-gray-300";
   historyItem.innerHTML = `
-    <p class="text-base text-gray-500">${feniAmount.toFixed(
-      2
-    )} Taka is Donated for ${feniTitle}</p><br>
-    <p class="text-xs text-gray-500">${new Date().toLocaleString()}</p>
+    <p class="text-base font-semibold">${feniAmount} Taka is Donated for ${feniTitle}</p><br>
+    <p class="text-xs text-gray-500">Date : ${new Date().toString()}</p>
   `;
 
   const historyContainer = document.getElementById("history-list");
@@ -90,6 +112,16 @@ buttonQuota.addEventListener("click", function () {
   // quota donation input
   const quotaAmount = parseFloat(document.getElementById("quota-amount").value);
 
+  if (
+    quotaAmount <= 0 ||
+    quotaAmount === "" ||
+    quotaAmount > totalBalance ||
+    isNaN(quotaAmount)
+  ) {
+    alert("Invalid Donation Amount");
+    return;
+  }
+
   const quotaTitle = document.getElementById("title-q").innerText;
 
   // quota total donation
@@ -97,22 +129,23 @@ buttonQuota.addEventListener("click", function () {
   let totalDonationQ = parseFloat(totalDonationElementQ.innerText);
 
   totalDonationQ = totalDonationQ + quotaAmount;
-  totalDonationElementQ.innerText = totalDonationQ.toFixed(2);
+  totalDonationElementQ.innerText = totalDonationQ;
 
   totalBalance = totalBalance - quotaAmount;
-  totalBalanceElement.innerText = totalBalance.toFixed(2);
+  totalBalanceElement.innerText = totalBalance;
 
   const quotaModal = document.getElementById("quota_modal_5");
   quotaModal.showModal();
 
-  //history
+  // clear input field
+  document.getElementById("quota-amount").value = "";
+
+  // history
   const historyItem = document.createElement("div");
-  historyItem.className = "bg-white p-5 rounded-md border-2 border-gray-300";
+  historyItem.className = "bg-white p-5 rounded-xl border border-gray-300";
   historyItem.innerHTML = `
-    <p class="text-base text-gray-500">${quotaAmount.toFixed(
-      2
-    )} Taka is Donated for ${quotaTitle}</p><br>
-    <p class="text-xs text-gray-500">${new Date().toLocaleString()}</p>
+    <p class="text-base font-semibold">${quotaAmount} Taka is Donated for ${quotaTitle}</p><br>
+    <p class="text-xs text-gray-500">Date : ${new Date().toString()}</p>
   `;
 
   const historyContainer = document.getElementById("history-list");
@@ -126,6 +159,7 @@ historyBtn.addEventListener("click", function () {
   historyBtn.classList.add(
     "bg-color-02",
     "text-color-07",
+    "hover:bg-lime-500",
     "font-semibold",
     "border-none"
   );
@@ -135,6 +169,7 @@ historyBtn.addEventListener("click", function () {
   donationBtn.classList.remove(
     "bg-color-02",
     "text-color-07",
+    "hover:bg-lime-500",
     "font-semibold",
     "border-none"
   );
@@ -153,12 +188,12 @@ historyBtn.addEventListener("click", function () {
   document.getElementById("history-section").classList.remove("hidden");
 });
 
-
 // donation button tab
 donationBtn.addEventListener("click", function () {
   donationBtn.classList.add(
     "bg-color-02",
     "text-color-07",
+    "hover:bg-lime-500",
     "font-semibold",
     "border-none"
   );
@@ -168,6 +203,7 @@ donationBtn.addEventListener("click", function () {
   historyBtn.classList.remove(
     "bg-color-02",
     "text-color-07",
+    "hover:bg-lime-500",
     "font-semibold",
     "border-none"
   );
@@ -185,4 +221,3 @@ donationBtn.addEventListener("click", function () {
   document.getElementById("history-section").classList.add("hidden");
   document.getElementById("donation-section").classList.remove("hidden");
 });
-
