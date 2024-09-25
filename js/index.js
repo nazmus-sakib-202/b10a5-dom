@@ -1,3 +1,13 @@
+// common function-01
+function getInputValueById(id) {
+  return parseFloat(document.getElementById(id).value);
+}
+
+// common function-02
+function getTitleInnerTextById(id) {
+  return document.getElementById(id).innerText;
+}
+
 // blog button
 function navigateToBlog() {
   window.location.href = "blog.html";
@@ -15,10 +25,8 @@ let totalBalance = parseFloat(totalBalanceElement.innerText);
 // noakhali donation button
 const buttonNoakhali = document.getElementById("btn-n");
 buttonNoakhali.addEventListener("click", function () {
-  // noakhali donation input
-  const noakhaliAmount = parseFloat(
-    document.getElementById("nokhali-amount").value
-  );
+  // noakhali donation input using common function-01
+  const noakhaliAmount = getInputValueById("nokhali-amount");
 
   if (
     noakhaliAmount <= 0 ||
@@ -30,7 +38,8 @@ buttonNoakhali.addEventListener("click", function () {
     return;
   }
 
-  const noakhaliTitle = document.getElementById("title-n").innerText;
+  //   noakhali title using common function-02
+  const noakhaliTitle = getTitleInnerTextById("title-n");
 
   // noakhali total donation
   const totalDonationElementN = document.getElementById("total-donation-n");
@@ -63,8 +72,8 @@ buttonNoakhali.addEventListener("click", function () {
 // feni donation button
 const buttonFeni = document.getElementById("btn-f");
 buttonFeni.addEventListener("click", function () {
-  // feni donation input
-  const feniAmount = parseFloat(document.getElementById("feni-amount").value);
+  // feni donation input using common function-01
+  const feniAmount = getInputValueById("feni-amount");
 
   if (
     feniAmount <= 0 ||
@@ -76,7 +85,8 @@ buttonFeni.addEventListener("click", function () {
     return;
   }
 
-  const feniTitle = document.getElementById("title-f").innerText;
+  //   feni title using common function-02
+  const feniTitle = getTitleInnerTextById("title-f");
 
   // feni total donation
   const totalDonationElementF = document.getElementById("total-donation-f");
@@ -109,8 +119,8 @@ buttonFeni.addEventListener("click", function () {
 // quota donation button
 const buttonQuota = document.getElementById("btn-q");
 buttonQuota.addEventListener("click", function () {
-  // quota donation input
-  const quotaAmount = parseFloat(document.getElementById("quota-amount").value);
+  // quota donation input using common function-01
+  const quotaAmount = getInputValueById("quota-amount");
 
   if (
     quotaAmount <= 0 ||
@@ -122,7 +132,8 @@ buttonQuota.addEventListener("click", function () {
     return;
   }
 
-  const quotaTitle = document.getElementById("title-q").innerText;
+  //   feni title using common function-02
+  const quotaTitle = getTitleInnerTextById("title-q");
 
   // quota total donation
   const totalDonationElementQ = document.getElementById("total-donation-q");
